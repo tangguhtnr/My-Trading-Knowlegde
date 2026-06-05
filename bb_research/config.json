@@ -1,0 +1,46 @@
+{
+  "bb_period": 20,
+  "bb_deviation": 2.0,
+  "rr_values": [1.6, 1.7, 1.9, 2.0],
+  "random_seed": 42,
+  "use_spread_cost": false,
+  "commission_per_trade_R": 0.0,
+  "slippage_pips": 0.0,
+  "default_spread_pips": {
+    "EURUSD": 0.8,
+    "GBPUSD": 1.2,
+    "USDJPY": 1.0,
+    "USDCHF": 1.2,
+    "AUDUSD": 1.0,
+    "NZDUSD": 1.2,
+    "USDCAD": 1.2,
+    "EURJPY": 1.5,
+    "GBPJPY": 2.0,
+    "EURGBP": 1.0,
+    "AUDJPY": 1.8
+  },
+  "pip_size": {
+    "EURUSD": 0.0001,
+    "GBPUSD": 0.0001,
+    "USDJPY": 0.01,
+    "USDCHF": 0.0001,
+    "AUDUSD": 0.0001,
+    "NZDUSD": 0.0001,
+    "USDCAD": 0.0001,
+    "EURJPY": 0.01,
+    "GBPJPY": 0.01,
+    "EURGBP": 0.0001,
+    "AUDJPY": 0.01
+  },
+  "sessions": {
+    "Asia": [0, 8],
+    "London": [8, 16],
+    "NewYork": [16, 24]
+  },
+  "datetime_column": "datetime",
+  "open_column": "open",
+  "high_column": "high",
+  "low_column": "low",
+  "close_column": "close",
+  "spread_column": "spread"
+}

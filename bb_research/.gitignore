@@ -1,0 +1,14 @@
+# Generated outputs and local data (keep the folders, not their contents)
+data/output/*.xlsx
+data/output/*.png
+data/input/*.csv
+data/input/*.xlsx
+data/input/*.xls
+!data/input/.gitkeep
+!data/output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

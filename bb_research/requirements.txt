@@ -1,0 +1,6 @@
+pandas>=1.5
+numpy>=1.23
+openpyxl>=3.0
+# matplotlib is optional and only used for equity-curve PNGs if --plot is passed.
+matplotlib>=3.5
+pytest>=7.0
