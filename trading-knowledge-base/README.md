@@ -25,10 +25,12 @@ Most attractive trading claims fail after proper validation. This repo preserves
 │   ├── research_findings.md          # distilled XAU/BTC/ETH findings
 │   ├── strategy_scorecard.md         # how to grade strategies
 │   ├── mt5_ea_methodology.md         # MT5/EA workflow and caveats
+│   ├── viral_claim_teardown.md       # auditing someone else's money claim
 │   └── glossary.md
 ├── templates/
 │   ├── strategy_research_report.md
-│   └── backtest_audit_checklist.md
+│   ├── backtest_audit_checklist.md
+│   └── viral_claim_teardown.md
 ├── scripts/
 │   ├── validate_ohlcv.py             # audit OHLCV CSV quality
 │   ├── cost_sensitivity.py           # cost drag sensitivity tool
@@ -62,8 +64,9 @@ python scripts/cost_sensitivity.py examples/sample_ohlcv.csv --return-col close 
 1. Creating a research report before touching live capital.
 2. Auditing whether a backtest is probably fake/buggy/overfit.
 3. Running basic OHLCV integrity checks.
-4. Teaching an agent or human the required skepticism for trading research.
-5. Standardizing future Project AI strategy reviews.
+4. Tearing down a viral “make money doing X” claim before it costs you anything.
+5. Teaching an agent or human the required skepticism for trading research.
+6. Standardizing future Project AI strategy reviews.
 
 ## What this repo refuses to claim
 
