@@ -25,13 +25,17 @@ Most attractive trading claims fail after proper validation. This repo preserves
 │   ├── research_findings.md          # distilled XAU/BTC/ETH findings
 │   ├── strategy_scorecard.md         # how to grade strategies
 │   ├── mt5_ea_methodology.md         # MT5/EA workflow and caveats
+│   ├── viral_claim_teardown.md       # auditing someone else's money claim
+│   ├── teardowns/                    # completed teardowns of specific claims
 │   └── glossary.md
 ├── templates/
 │   ├── strategy_research_report.md
-│   └── backtest_audit_checklist.md
+│   ├── backtest_audit_checklist.md
+│   └── viral_claim_teardown.md
 ├── scripts/
 │   ├── validate_ohlcv.py             # audit OHLCV CSV quality
 │   ├── cost_sensitivity.py           # cost drag sensitivity tool
+│   ├── binary_event_math.py          # payoff math for $0-$1 event contracts
 │   └── mean_reversion_backtest.py    # minimal daily MR example
 ├── examples/
 │   └── sample_ohlcv.csv
@@ -55,6 +59,9 @@ python scripts/validate_ohlcv.py examples/sample_ohlcv.csv --time-col time --ohl
 
 # Cost sensitivity from returns CSV
 python scripts/cost_sensitivity.py examples/sample_ohlcv.csv --return-col close --price-mode close_to_close
+
+# Payoff math for a binary event contract: breakeven, growth, Kelly, streak needed
+python scripts/binary_event_math.py --price 0.90 --fraction 0.50 --target-multiple 52
 ```
 
 ## What this repo is good for
@@ -62,8 +69,10 @@ python scripts/cost_sensitivity.py examples/sample_ohlcv.csv --return-col close 
 1. Creating a research report before touching live capital.
 2. Auditing whether a backtest is probably fake/buggy/overfit.
 3. Running basic OHLCV integrity checks.
-4. Teaching an agent or human the required skepticism for trading research.
-5. Standardizing future Project AI strategy reviews.
+4. Tearing down a viral “make money doing X” claim before it costs you anything
+   (see `docs/teardowns/` for a worked example).
+5. Teaching an agent or human the required skepticism for trading research.
+6. Standardizing future Project AI strategy reviews.
 
 ## What this repo refuses to claim
 
